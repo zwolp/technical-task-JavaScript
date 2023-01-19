@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./public/style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
+  <title>Bilans osobisty</title>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+        <div class="center">
+		  	<button class="log-in-button button">Logowanie</button>
+		  	<button class="register-button button">Rejestracja</button>
+        </div>
+        <div class="center">
+            <p class="user-name"></p>
+		  	<button class="log-out-button button">Wyloguj</button>
+        </div>
+    </header>
+    <div class="content">
+        <h1 class="main-title">Bilans osobisty</h1>
+        <div class="home-view views center">
+            <img class="home-img" src="./public/img/dollar.png" alt="application logo">
+        </div>
+        <div class="log-in-view views">
+            <h2 class="title">Logowanie</h2>
+            <form class="register-form">
+                <label>
+                    <div class="input-container center">
+                        <p>Nazwa lub email</p>
+                        <input type="text" class="login-email-name">
+                    </div>
+                    <p class="login-email-name-error error"></p>
+                </label>
+                <label>
+                    <div class="input-container center">
+                        <p>Hasło</p>
+                        <input type="password" class="login-password">
+                    </div>
+                    <p class="login-password-error error"></p>
+                </label>
+                <input type="submit" class="login-button form-button button" value="Zaloguj">
+            </form>
+        </div>
+        <div class="registration-view views">
+            <h2 class="title">Rejestracja</h2>
+            <form>
+                <label>
+                    <div class="input-container center">
+                        <p>Nazwa użytkownika</p>
+                        <input type="text" class="register-name-input">
+                    </div>
+                    <p class="register-name-error error"></p>
+                </label>
+                </label>
+                <label>
+                    <div class="input-container center">
+                        <p>Email</p>
+                        <input type="email" class="register-email-input">
+                    </div>
+                    <p class="register-email-error error"></p>
+                </label>
+                <label>
+                    <div class="input-container center">
+                        <p>Potwierdź email</p>
+                        <input type="text" class="register-check-email-input">
+                    </div>
+                    <p class="register-check-email-error error"></p>
+                </label>
+                <label>
+                    <div class="input-container center">
+                        <p>Hasło</p>
+                        <input type="password" class="register-password-input">
+                    </div>
+                    <p class="register-password-error error"></p>
+                </label>
+                <input type="submit" class="registration-button form-button button" value="Zarejestruj">
+            </form>
+        </div>
+        <div class="logged-user-view views">
+            <h2 class="error-data"></h2>
+            <div class="charts">
+                <div class="chart1 chart">
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart2 chart">
+                    <canvas id="chart2"></canvas>
+                </div>
+            </div>
+            <div class="transactions-history center">
+                <h3>Historia transakcji</h3>
+            </div>
+        </div>
+    </div>
+	</div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
